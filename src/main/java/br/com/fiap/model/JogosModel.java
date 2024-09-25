@@ -1,6 +1,9 @@
 package br.com.fiap.model;
 
-public class Jogos {
+import jakarta.persistence.Entity;
+
+@Entity
+public class JogosModel {
 
     String titulo;
     String desenvolvedora;
@@ -10,7 +13,7 @@ public class Jogos {
     boolean platinado;
     String plataforma;
 
-    public Jogos(String titulo, String desenvolvedora, String midia, int lancamento, boolean terminado, boolean platinado, String plataforma) {
+    public JogosModel(String titulo, String desenvolvedora, String midia, int lancamento, boolean terminado, boolean platinado, String plataforma) {
         this.titulo = titulo;
         this.desenvolvedora = desenvolvedora;
         this.midia = midia;
