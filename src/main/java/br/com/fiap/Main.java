@@ -1,9 +1,21 @@
 package br.com.fiap;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
+import br.com.fiap.repository.JogosRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
+import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
+@SpringBootApplication(exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
+@EnableMongoRepositories
+public class Main{
+
+    @Autowired
+    JogosRepository jogosRepository;
+
+    public static void main(String[] args) {
+        SpringApplication.run(Main.class, args);
     }
 }

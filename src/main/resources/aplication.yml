@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://Admin:Admin@cluster0.cinbx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: pessoal

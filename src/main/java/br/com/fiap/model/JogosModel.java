@@ -1,10 +1,15 @@
 package br.com.fiap.model;
 
-import jakarta.persistence.Entity;
 
-@Entity
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document("jogos")
 public class JogosModel {
 
+
+    @Id
+    private String id;
     String titulo;
     String desenvolvedora;
     String midia;
