@@ -15,13 +15,9 @@ public class JogosService {
 
     public JogosModel gravar(JogosModel jogosModel){
 
-        return jogosModel;
+        return jogosRepository.save(jogosModel);
     }
 
-    public JogosModel buscarPorNome(String jogoNome){
-        JogosModel jogosModel = null;
-        return jogosModel;
-    }
 
     public List<JogosModel> buscarTodos(){
         return  jogosRepository.findAll();
